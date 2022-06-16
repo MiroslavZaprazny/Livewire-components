@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('contact');
 });
+
+Route::get('/search', function(){
+    return view('search');
+});
+
+Route::get('/data-table', function(){
+    return view('table');
+});
+
 
 Route::post('contact',[ContactController::class,'store']);

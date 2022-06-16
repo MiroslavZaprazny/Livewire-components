@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-        <livewire:styles />
-    </head>
-    <body>
-        {{-- <livewire:counter/> --}}
-        <livewire:contact-form/>
-           <h2 class="text-lg font-semibold mt-4">Livewire Search Dropdown</h2>
+   <x-header/> 
+    <h2 class="text-lg font-semibold mt-4">Livewire Search Dropdown</h2>
 
     <div class="my-8">
         <nav class="bg-white shadow">
@@ -49,7 +29,7 @@
                             </a>
                         </div>
                     </div>
-                    <livewire:search-dropdown />
+                    <livewire:search-dropdown/>
                     <div class="flex items-center lg:hidden">
                         <!-- Mobile menu button -->
                         <button
@@ -96,8 +76,4 @@
             </div>
         </nav>
     </div>
-
-
-        <livewire:scripts />
-    </body>
-</html>
+<livewire:scripts/>
