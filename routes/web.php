@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ContactController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,6 @@ Route::get('/data-table', function(){
     return view('table');
 });
 
-
-Route::post('contact',[ContactController::class,'store']);
+Route::get('/posts', [PostController::class,'index']);
+Route::get('/posts/{post:id}', [PostController::class,'view']);
+Route::post('/comment', [PostController::class,'store']);
